@@ -1,0 +1,15 @@
+.page-content{
+width: 60%;
+margin-left: 20%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.page-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+

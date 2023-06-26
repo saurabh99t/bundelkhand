@@ -1,0 +1,1238 @@
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Bundelkhand Vishwkosh </title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="style.css">
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/x-icon" href="https://bundelkhand-kosh.stilld.in/assets/images/favicon.png">
+      <!-- CSS
+         ============================================ -->
+         
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500;600&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;600&family=Quicksand:wght@300;400;500;600;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://bundelkhand-kosh.stilld.in/assets/css/bootstrap.min.css">
+      <!-- Icon Font CSS -->
+      <link rel="stylesheet" href="https://bundelkhand-kosh.stilld.in/assets/css/icon-font.min.css">
+      <!-- Plugins CSS -->
+      <link rel="stylesheet" href="https://bundelkhand-kosh.stilld.in/assets/css/plugins.css">
+      <!-- Main Style CSS -->
+      <link rel="stylesheet" href="https://bundelkhand-kosh.stilld.in/assets/css/style.css">
+      <!-- Modernizer JS -->
+      <script src="https://bundelkhand-kosh.stilld.in/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+       
+     <style>
+     
+     * {
+   font-family: 'Open Sans', sans-serif;
+   /*width: 100%;*/
+}
+
+     
+    body {
+  background-color: #eee;
+  padding-top: 60px;
+  max-width: 100%;
+  
+  /*padding-bottom: 40px;*/
+}
+.container {
+    min-width: 100%;
+}
+ 
+
+.mainDiv {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #a7d9de;
+    font-family: 'Open Sans', sans-serif;
+  }
+ .cardStyle {
+    width: 500px;
+    border-color: white;
+    background: #fff;
+    padding: 36px 0;
+    border-radius: 4px;
+    margin: 30px 0;
+    box-shadow: 0px 0 2px 0 rgba(0,0,0,0.25);
+  }
+#signupLogo {
+  max-height: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.formTitle{
+  font-weight: 600;
+  margin-top: 20px;
+  color: #2F2D3B;
+  text-align: center;
+}
+.inputLabel {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+  margin-top: 24px;
+}
+  .inputDiv {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+input {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  border: solid 1px #10717a;
+  padding: 0 11px;
+}
+input:disabled {
+  cursor: not-allowed;
+  border: solid 1px #eee;
+}
+.buttonWrapper {
+  margin-top: 40px;
+}
+  .submitButton {
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    color: #fff;
+    background-color: #5cc5c7;
+    border-color: #5cc5c7;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+.submitButton:disabled,
+button[disabled] {
+  border: 1px solid #5cc5c7;
+  background-color: #5cc5c7;
+  color:#5cc5c7 ;
+}
+.btn{
+    margin:8px;
+}
+.button {
+	border-radius: 20px;
+	border: 1px solid #5cc5c7;
+	background-color:#5cc5c7 ;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#loader {
+  position: absolute;
+  /*z-index: 1;*/
+  margin: -2px 0 0 10px;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #666666;
+  width: 14px;
+  height: 14px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes  spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Start Styling */
+
+.header-top-border {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+}
+
+.header-bottom{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 60px;
+    top: 0px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+.header-logo {
+    left: 10px;
+}
+
+.goog-te-combo
+{
+    width: 160px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.header-advance-search {
+    height: 30px;
+    margin-top: 3px;
+}
+
+.header-advance-search .input {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 30px;
+}
+
+.header-advance-search .input input{
+    height: 30px;
+     border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+}
+
+.header-advance-search .submit button{
+    height: 30px;
+}
+.header-advance-search .submit button .search_icon {
+ margin-top: -5px;   
+}
+
+/* New Styles */
+.left_side_header {
+    display: flex;
+    justify-content: space-between;
+}
+.options_head {
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.right_options {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.right_options li {
+        margin-left: 10px;
+        color: #11a5ac;
+    }
+    .right_options a, .right_options button {
+        padding: 5px 10px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #11a5ac;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .right_options a:hover, .right_options button:hover {
+        background-color: #e6e6e6;
+    }
+    .login-box {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+       background-color: #11a5ac;
+    }
+     .right_options li:hover .login-box {
+        display: block;
+    }
+    .login-box h3 {
+        margin-top: 0;
+        font-size: 18px;
+        padding-left: 20px; /* Add padding to accommodate the icon */
+        position: relative; /* Position relative for icon positioning */
+        color: #FFFFFF;
+    }
+    .login-box h3::before {
+        content: "\f2bd"; /* Font Awesome user-circle icon */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .login-box p {
+        margin-bottom: 10px;
+        font-size: 12px;
+         color: #fff; 
+    }
+    .login-box button-container {
+        display: flex;
+       flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    }
+     .login-box button {
+        /*display: block;*/
+        margin-bottom: 5px;
+         color: #11a5ac; 
+    }
+    .login-box .org-link {
+    font-size: 12px;
+    /*margin-top: 10px;*/
+    text-align: center;
+    text-decoration: none;
+    /*color: #333;*/
+     color: #11a5ac; 
+}
+
+/* Login Box Style End */
+
+/* Left Options Style Start */
+.toggle-icon {
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-icon a i {
+  font-size: 24px;
+  padding-top: 8px;/* Adjust the font size as desired */
+}
+
+.hover-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  /*background-color: #f9f9f9;*/
+  /*border: 1px solid #ccc;*/
+  /*padding: 10px;*/
+  /*min-width: 150px;*/
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid #24a9ae;
+   /*z-index: -999;*/
+    width: 250px;
+    padding: 15px 0 !important;
+    padding-left: 15px !important;
+    /*padding: 10px;*/
+    /*margin-top: 30px;*/
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  /*z-index: 1; */
+}
+
+.toggle-icon:hover .hover-menu {
+  display: block;
+  color: #11a5ac;
+}
+
+.hover-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hover-menu ul li {
+  margin-bottom: 5px;
+}
+
+.hover-menu ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hover-menu ul li a:hover {
+    color: #11a5ac;
+}
+
+.sub-menus {
+ display: none;
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  margin-top: -30px;
+ background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid #24a9ae;
+   /*z-index: -999;*/
+    width: 250px;
+    padding: 15px 0 !important;
+    padding-left: 15px !important;
+    /*padding: 10px;*/
+    /*margin-top: 30px;*/
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.hover-menu ul li:hover .sub-menus {
+  display: block;
+  color: #11a5ac;
+}
+
+/* Media Query Start */
+
+@media  only screen and (min-width: 350px) and (max-width: 450px) {
+    *{
+        max-width: 100%;
+    }
+     .header-section.section {
+      width: auto; /* Adjust the width as per your requirement */
+   }
+    .container {
+        width: 100% !important;
+    }
+   .header-logo {
+       position: absolute;
+       left: 0px;
+       top: 0px;
+       margin-top: -8px;
+   }
+   .logo_image {
+       max-width: 120px !important;
+   }
+   .sub-menus {
+       display: block !important;
+   }
+   
+   .mobile-menu   {
+       position: relative;
+       right: -20px;
+       height: 30px !important;
+       color: red;
+       display: block !important;
+   }
+   .right_options {
+       margin-left: -30px;
+       margin-top: 10px;
+   }
+   .toggle-icon a i  {
+       display: block !important;
+   }
+}
+    
+    
+    .menu_icon{
+        font-size: 8px;
+    }
+  
+  </style>
+      
+      
+      
+      
+      
+   </head>
+   <body>
+      <!-- Header Section Start -->
+      <div class="header-section section" style="width: 100%">
+        
+         <!-- Header Bottom Start -->
+         <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+               <div class="row align-items-center justify-content-between">
+               <div class="col-lg-9 col-md-9 order-12 order-lg-2 order-xl-2 left_side_header">
+               <div class="header-logo">
+                        <a href="/">
+                        <img src="https://bundelkhand-kosh.stilld.in/assets/images/logo.png" alt="" class="logo_image">
+                       
+                        </a>
+                     </div>
+                        <!--<div class="col-lg-9 col-md-8 col-12 order-12 order-lg-2 order-xl-2 d-none d-lg-block">-->
+                      <!--Main Menu Start -->
+                     <div class="main-menu options_head" >
+                        <nav>
+                           <ul class="left_options">
+                               
+                               <li class="toggle-icon">
+        <!--<a href="/" class="icon_menu">☰</a>-->
+        <a href="/"><i class="fas fa-bars"></i></a>
+        
+        <div class="hover-menu">
+          <ul>
+               <li class="dropdown">
+              <a href="/"><i class="fa fa-info-circle menu_icon" aria-hidden="true" style="font-size: 20px; margin-right: 10px; color: #11a5ac;"></i> About us</a>
+              <ul class="sub-menus">
+                <li><a href="introduction"><i class="fa fa-info-circle" aria-hidden="true" style="font-size: 20px; margin-right: 10px; color: #11a5ac;"></i>An Introduction</a></li>
+                <li><a href="organization"><i class="fa fa-building-o" aria-hidden="true" style="font-size: 20px; margin-right: 10px; color: #11a5ac;"></i>Organizational Structure</a></li>
+                <li><a href="vision-mission"><i class="fa fa-eye" aria-hidden="true" style="font-size: 20px; margin-right: 10px; color: #11a5ac;"></i>Vision &amp; Mission</a></li>
+              </ul>
+            </li>
+            <li  class="dropdown">
+                <a href="gallery"><i class="fa fa-image menu_icon" style="font-size: 20px; margin-right: 10px; color: #11a5ac;" ></i> Gallery</a>
+                <ul class="sub-menus">
+                     <li><a href="introduction"><i class="fa fa-picture-o" aria-hidden="true" style="font-size: 20px; margin-right: 10px; color: #11a5ac;"></i>Photographs</a>
+                </ul>
+            </li>
+            <li><a href="contact"><i class="fa fa-address-book menu_icon" aria-hidden="true" style="font-size: 20px; margin-right: 10px; color: #11a5ac;"></i> Contact us</a></li>
+            <!--<li><a href="#">About us</a></li>-->
+            
+          </ul>
+        </div>
+      </li>
+                               
+                               
+                              <li class="active" style="text-decoration: none; "><a href="mainbook" style="font-weight: 400;">Books</a></li>
+                             <!-- <li  class="dropdown">-->
+                             <!--   <a href="/">About us</a>-->
+                             <!--   <ul class="sub-menu">-->
+                             <!--      <li><a href="introduction">An Introduction</a>-->
+                             <!--      </li>-->
+                             <!--      <li><a href="organization">Organizational Structure</a>-->
+                             <!--      </li> -->
+                             <!--      <li><a href="organization">Vision & Mision</a>-->
+                             <!--      </li> -->
+                             <!--   </ul>-->
+                             <!--</li>-->
+                              <!--<li class="dropdown">-->
+                              <!--    <a href="#"> Project</a>-->
+                              <!--    <ul class="sub-menu">-->
+                              <!--     <li><a href="introduction">Online Encyclopedia</a>-->
+                              <!--     </li>-->
+                              <!--     <li><a href="organization">Printed Encyclopedia</a>-->
+                              <!--     </li> -->
+                              <!--     <li><a href="organization">Bundelkhand Ratna Samman</a>-->
+                              <!--     </li> -->
+                              <!--     <li><a href="organization">Bundelkhand Gaurav Samman</a>-->
+                              <!--     </li> -->
+                              <!--      <li><a href="organization">E-Library</a>-->
+                              <!--     </li> -->
+                              <!--  </ul>-->
+                              <!--</li>-->
+                              <li>
+                                 <a href="samiti" style="font-weight: 400;">Samiti </a>                                  
+                             </li> 
+                              <li class="dropdown">
+                                  <a href="event" style="font-weight: 400;">Events</a>
+                                  <ul class="sub-menu">
+                                   <li><a href="introduction">Launching Meet</a>
+                                   </li>
+                                   <li><a href="organization">Online Meet</a>
+                                   </li> 
+                                </ul>
+                                 </li>
+                              <li class="dropdown">
+                                  <a href="gallery" style="font-weight: 400;">Gallery</a>
+                                  <ul class="sub-menu">
+                                   <li><a href="introduction">Photographs</a>
+                                   </li>
+                                </ul>
+                                </li>
+                                                           <!-- <li  class="dropdown">-->
+                             <!--   <a href="#">Join us</a>-->
+                                
+                             <!--   <ul class="sub-menu">-->
+                             <!--       <li><a href="login">Log in </a>-->
+                             <!--       </li>-->
+                             <!--      <li><a href="signup">Sign up</a>-->
+                             <!--      </li>                                                                      -->
+                             <!--   </ul>-->
+                             
+                             <!--</li>-->
+                                                                  
+                              <!--<li><a href="contact">Contact us</a>  </li>-->
+                                                               
+                           </ul>
+                        </nav>
+
+                     </div>
+                      <!--Main Menu End -->
+                  <!--</div>-->
+                     
+                     
+                </div>
+                        <div class="col-lg-3 col-md-3 order-12 order-lg-2 order-xl-2 header_right_options">
+                             <nav>
+                <ul class="right_options">
+                    <!-- Right side menu items -->
+                    <li>
+                        <a>Login</a>
+                        <div class="login-box">
+            <h3>Login or Create an Account</h3>
+            <p>Creating an account is free and allow you to explore more abouts events, projects or books.</p>
+           <div class="button-container">
+                <!--<button>Create an Account</button>-->
+                <a href="signup">Create An Account</a>
+                <a href="login">Login</a>
+            </div>
+            <hr>
+             <a href="#" class="org-link">Organizational Account Login</a>
+        </div>
+                    </li>
+                    <li>
+                        <button>Donate</button>
+                    </li>
+                </ul>
+                
+                
+                
+            </nav>
+            
+                        </div>
+                  <!--<div class="col-lg-9 col-md-8 col-12 order-12 order-lg-2 order-xl-2 d-none d-lg-block">-->
+                  <!--    Main Menu Start -->
+                  <!--   <div class="main-menu options_head" >-->
+                  <!--      <nav>-->
+                  <!--         <ul class="left_options">-->
+                  <!--            <li class="active" style="text-decoration: none;"><a href="/">Home</a></li>-->
+                  <!--            <li  class="dropdown">-->
+                  <!--              <a href="/">About us</a>-->
+                  <!--              <ul class="sub-menu">-->
+                  <!--                 <li><a href="introduction">An Introduction</a>-->
+                  <!--                 </li>-->
+                  <!--                 <li><a href="organization">Organizational Structure</a>-->
+                  <!--                 </li> -->
+                  <!--                 <li><a href="organization">Vision & Mision</a>-->
+                  <!--                 </li> -->
+                  <!--              </ul>-->
+                  <!--           </li>-->
+                  <!--            <li class="dropdown">-->
+                  <!--                <a href="#"> Project</a>-->
+                  <!--                <ul class="sub-menu">-->
+                  <!--                 <li><a href="introduction">Online Encyclopedia</a>-->
+                  <!--                 </li>-->
+                  <!--                 <li><a href="organization">Printed Encyclopedia</a>-->
+                  <!--                 </li> -->
+                  <!--                 <li><a href="organization">Bundelkhand Ratna Samman</a>-->
+                  <!--                 </li> -->
+                  <!--                 <li><a href="organization">Bundelkhand Gaurav Samman</a>-->
+                  <!--                 </li> -->
+                  <!--                  <li><a href="organization">E-Library</a>-->
+                  <!--                 </li> -->
+                  <!--              </ul>-->
+                  <!--            </li>-->
+                  <!--            <li>-->
+                  <!--               <a href="mainbook">Books </a>                                  -->
+                  <!--           </li> -->
+                  <!--            <li class="dropdown">-->
+                  <!--                <a href="event">Events</a>-->
+                  <!--                <ul class="sub-menu">-->
+                  <!--                 <li><a href="introduction">Launching Meet</a>-->
+                  <!--                 </li>-->
+                  <!--                 <li><a href="organization">Online Meet</a>-->
+                  <!--                 </li> -->
+                  <!--              </ul>-->
+                  <!--               </li>-->
+                  <!--            <li class="dropdown">-->
+                  <!--                <a href="gallery">Gallery</a>-->
+                  <!--                <ul class="sub-menu">-->
+                  <!--                 <li><a href="introduction">Photographs</a>-->
+                  <!--                 </li>-->
+                  <!--              </ul>-->
+                  <!--              </li>-->
+                  <!--            -->
+                  <!--            <li  class="dropdown">-->
+                  <!--              <a href="#">Join us</a>-->
+                                
+                  <!--              <ul class="sub-menu">-->
+                  <!--                  <li><a href="login">Log in </a>-->
+                  <!--                  </li>-->
+                  <!--                 <li><a href="signup">Sign up</a>-->
+                  <!--                 </li>                                                                      -->
+                  <!--              </ul>-->
+                             
+                  <!--           </li>-->
+                  <!--              -->
+                                  
+                  <!--            <li><a href="contact">Contact us</a>  </li>-->
+                  <!--                                             -->
+                  <!--         </ul>-->
+                  <!--      </nav>-->
+                  <!--      <div class="header_right_options">-->
+                  <!--          <li>-->
+                  <!--              <a>Login</a>-->
+                  <!--          </li>-->
+                  <!--          <button>Donate</button>-->
+                  <!--      </div>-->
+                  <!--   </div>-->
+                  <!--    Main Menu End -->
+                  <!--</div>-->
+                  <!-- Mobile Menu -->
+                  <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+               </div>
+            </div>
+         </div>
+         <!-- Header Bottom End -->
+      </div>
+      
+      <section >
+      
+       <div class="container main_container">
+
+    <div id="dummyModal" role="dialog" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" class="close">&times;</button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+          <div class="mainDiv">
+  <div class="cardStyle">
+    <form action="https://bundelkhand-kosh.stilld.in/change-user-password" method="post" name="signupForm" id="signupForm">
+      <input type="hidden" name="_token" value="CbwreCadZh7gBw3u2hLywGtnxIc5LyCE6bNCA5kc">      <img src="" id="signupLogo"/>
+      
+      <h2 class="formTitle">
+         Change Password
+      </h2>
+     <div class="card-body">
+                            
+                            <div class="mb-3">
+                                <label for="oldPasswordInput" class="form-label">Old Password</label>
+                                <input name="old_password" type="password" class="form-control " id="oldPasswordInput"
+                                    placeholder="Old Password">
+                                                            </div>
+                            <div class="mb-3">
+                                <label for="newPasswordInput" class="form-label">New Password</label>
+                                <input name="new_password" type="password" class="form-control " id="newPasswordInput"
+                                    placeholder="New Password">
+                                                            </div>
+                            <div class="mb-3">
+                                <label for="confirmNewPasswordInput" class="form-label">Confirm New Password</label>
+                                <input name="new_password_confirmation" type="password" class="form-control" id="confirmNewPasswordInput"
+                                    placeholder="Confirm New Password">
+                            </div>
+
+                        </div>
+    
+    <div class="buttonWrapper">
+      <button type="submit" id="submitButton" onclick="validateSignupForm()" class="submitButton pure-button pure-button-primary">
+        <span>Continue</span>
+        <span id="loader"></span>
+      </button>
+    </div>
+      
+  </form>
+  </div>
+</div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+               </section>                     
+                                    
+                                    
+                                    
+                       
+      <!-- Header Section End -->
+       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script>
+    $('document').ready(function() {
+  $('#btnTest').click(function() {
+    $('#dummyModal').modal('show');
+  });
+});
+
+
+</script>    
+
+    <!-- Page Banner Section Start -->
+<div class="page-banner-section section">
+    <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+
+        <!-- Page Banner -->
+        <div class="col-lg-12 col-12 order-lg-2 d-flex align-items-center justify-content-center">
+            <div class="page-banner" style="background-image: url(/assets/images/events/bundelkhand_auto_x2.jpg); width: 100%; background-size: cover; margin-top: 10px; ">
+                <h1 style="font-family: 'Open Sans', sans-serif; font-size: 40px;">Organizational  </h1>
+                
+                <div class="breadcrumb">
+                    <ul>
+                        <li style="font-family: 'Open Sans', sans-serif;"><a href="#" style="font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 600;">HOME - </a></li>
+                        <li style="font-family: 'Open Sans', sans-serif;"><a href="#" style="font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 600;">Organizational  </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+
+      
+
+    </div>
+</div><!-- Page Banner Section End -->
+  
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                
+                <div class="page-content">
+                    <div class=" col-lg-12 col-sm-12 col-md-12 my-5">
+                        <div class="content page-about page-res">
+                            <h1 class="page-title my-3">Organizational Structure</h1>
+                            <div class="text-style">
+                                <table class="table table-success table-striped-columns table-hover"  style=" border-collapse: collapse; width: 100%; height: 600px; border: 1px solid;" cellpadding="10" cellspacing="10">
+                                    <tbody>
+                                        <tr style="height: 20px;">
+                                            <td width="208" style="width: 49.9563%; height: 20px;">प्रो. सरोज गुप्ता</td>
+                                            <td width="153" style="width: 50.0437%; height: 20px;">अध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री सचिन चतुर्वेदी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">प्रो. ब्रजेश कुमार श्रीवास्तव</td>
+                                            <td style="width: 50.0437%; height: 20px;">कोषाध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री प्रदीप तिवारी</td>
+                                            <td style="width: 50.0437%; height: 20px;">उपाध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">प्रो. नागेश दुबे</td>
+                                            <td style="width: 50.0437%; height: 20px;">उपाध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. आशीष द्विवेदी</td>
+                                            <td style="width: 50.0437%; height: 20px;">उपाध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. के. कृष्णाराव</td>
+                                            <td style="width: 50.0437%; height: 20px;">संयुक्त सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री सुधाकर पाठक</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">प्रो. राजीव सिजारिया</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री विनोद कुमार मिश्र</td>
+                                            <td style="width: 50.0437%; height: 20px;">सह-सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. ऊषा मिश्रा</td>
+                                            <td style="width: 50.0437%; height: 20px;">सह-सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">प्रो. पंकज तिवारी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सांस्कृतिक सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. अनूप रंजन पाण्डेय</td>
+                                            <td style="width: 50.0437%; height: 20px;">सांस्कृतिक सचिव</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री वीरेन्द्र त्रिपाठी</td>
+                                            <td style="width: 50.0437%; height: 20px;">प्रबन्धक</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. रामकुमार गोस्वामी</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-प्रबन्धक</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. वीरेन्द्र निर्झर</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-प्रबन्धक</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री अतुल साफी</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-प्रबन्धक</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री अजय भान सिंह</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-प्रबन्धक</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री राम प्रकाश गुप्ता</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-कोषाध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">प्रो. प्रणव देव</td>
+                                            <td style="width: 50.0437%; height: 20px;">उप-कोषाध्यक्ष</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. कुमकुम गुप्ता</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री अनिल सरावगी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री संतोष कुमार तिवारी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री जी.एस. रंजन</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्री आशीष तिवारी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. रंजना सिंह बुन्देला</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. संगीता सुहाने</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">कु. चांदनी सोनी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">श्रीमती शोभा सर्राफ</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                        <tr style="height: 20px;">
+                                            <td style="width: 49.9563%; height: 20px;">डाॅ. ऋतु तिवारी</td>
+                                            <td style="width: 50.0437%; height: 20px;">सदस्य</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+   
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500;600&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;600&family=Quicksand:wght@300;400;500;600;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+
+
+
+<style>
+*{
+    /*width: 100%;*/
+}
+    .footer_icon{
+        font-size: 34px;
+        color: #afb5bb;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    
+    .footer_icon:hover {
+        color: #24a9ae;
+    }
+    
+    .icon_section {
+        margin-top: 20px;
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .subs {
+        font-size: 22px;
+    }
+    
+    @media  only screen and (min-width: 350px) and (max-width: 450px) {
+        .newsletter_div {
+            height: 240px !important;
+        }
+        .subscribes {
+            margin-top: -70px;
+        }
+        .subscribe_button{
+            margin-top: 15px !important;
+        }
+        .footer_icon {
+            margin-left: -220px;
+        }
+        .icon_section {
+            margin-left: 50px;
+        }
+    }
+</style>
+
+<!-- Subscribe Section Start -->
+<div class="subscribe-section section bg-ivory pt-15 pb-15">
+    <div class="container">
+        <div class="row align-items-center newsletter_div" style="height: 70px;">
+            
+            <!-- Mailchimp Subscribe Content Start -->
+            <div class="col-lg-6 col-12 mb-15">
+                <div class="subscribe-content" style="font-family: 'Open Sans', sans-serif;">
+                    <h4 class="subs">Subscribe <span><Strong style="color: #24a9ae;">Our Newsletter</Strong></span></h4>
+                    <h4 class="subs"><span>To Get Latest</span> Product Update</h4>
+                </div>
+            </div><!-- Mailchimp Subscribe Content End -->
+            
+            
+            <!-- Mailchimp Subscribe Form Start -->
+            <div class="col-lg-6 col-12 mb-15 subscribes">
+                
+				<form class="subscribe-form" action="#" style="height: 50px;"> 
+					<input  id="citySelect" name="email" type="email" autocomplete="off" placeholder="Enter your email here" style="height: 50px; margin-top: -4px;" />
+					<button id="submit" class="subscribe_button" style="height: 50px; margin-top: -4px; margin-right: -3px; color: #FFFFFF; font-family: 'Open Sans', sans-serif;">subscribe</button>
+				</form>
+				<!-- mailchimp-alerts Start -->
+				<div class="mailchimp-alerts text-centre">
+					<div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+					<div class="mailchimp-success"></div><!-- mailchimp-success end -->
+					<div class="mailchimp-error"></div><!-- mailchimp-error end -->
+				</div><!-- mailchimp-alerts end -->
+                
+            </div><!-- Mailchimp Subscribe Form End -->
+            
+        </div>
+    </div>
+</div><!-- Subscribe Section End -->
+
+<!-- Footer Section Start -->
+<div class="footer-section section bg-gray">
+   
+    <!-- Footer Top Section Start -->
+    <div class="footer-top-section section pt-40">
+        <div class="container">
+           
+
+            
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-12 mb-40" >
+                <div class="footer-widget text-center" style="margin-right: -150px;">
+                        <div class="footer-logo">
+                            <img src="https://bundelkhand-kosh.stilld.in/assets/images/logo.png" style="width:65%" alt="">
+                            <img class="theme-dark" src="https://bundelkhand-kosh.stilld.in/assets/images/logo.png" alt="">
+                        </div>
+                          <div class="col-lg-7 col-12">
+                <div class="footer-icons icon_section" >
+                    <i class="fa fa-facebook-official footer_icon" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square footer_icon" aria-hidden="true"></i>
+                    <i class="fa fa-instagram footer_icon" aria-hidden="true"></i>
+                </div>
+                </div>
+                        <!--<p>Electronics product actual teachings of  he great explorer of the truth, the malder of human happiness. No one rejects</p>-->
+                    </div>
+                </div>                    
+                <!-- Footer Widget Start -->
+                <div class="col-lg-2 col-md-6 col-12 mb-40">
+                    <div class="footer-widget">
+                       
+                        <h4 class="widget-title">Contact Info</h4>
+                        
+                        <p class="contact-info">
+                            <span>Address</span>
+                            Sneh Nagar, Madhukar Shah Ward, <br>
+                            Seema Colony, Sagar, M.P.                       </p>
+                        
+                        <p class="contact-info">
+                            <span>Phone</span>
+                            <a href="tel:01234567890">+91 9425693570</a>
+                            <a href="tel:01234567891">+91 8299487848</a>
+                        </p>
+                        
+                        <p class="contact-info">
+                            <span>Email</span>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                            <!--<a href="#">www.example.com</a>-->
+                        </p>
+                        
+                    </div>
+                </div><!-- Footer Widget End -->
+                
+                <!-- Footer Widget Start -->
+                <div class="col-lg-2 col-md-6 col-12 mb-40">
+                    <div class="footer-widget">
+                       
+                        <h4 class="widget-title">Sub Links</h4>
+                        
+                        <ul class="link-widget">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Books</a></li>
+                           
+                            <li><a href="#">E-Library</a></li>
+                            <li><a href="#">Bundelkhand Gaurav Samman</a></li>
+                            <li><a href="#">Bundelkhand Ratna Samman</a></li>
+                           
+                            <!--<li><a href="#">Contact</a></li>-->
+                        </ul>
+                        
+                    </div>
+                </div><!-- Footer Widget End -->
+                
+                <!-- Footer Widget Start -->
+                <div class="col-lg-3 col-md-6 col-12 mb-40">
+                    <div class="footer-widget">
+                       
+                        <h4 class="widget-title">Information</h4>
+                        
+                        <ul class="link-widget">
+                            <!--<li><a href="#">Track your order</a></li>-->
+                            <!--<li><a href="#">Locate Store</a></li>-->
+                            <!--<li><a href="#">Online Support</a></li>-->
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Support</a></li>
+                             <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Press Media</a></li>
+                             <li><a href="#">Events</a></li>
+                            <!--<li><a href="#">Special coupon</a></li>-->
+                        </ul>
+                        
+                    </div>
+                </div><!-- Footer Widget End -->
+     
+                
+            </div>
+            
+        </div>
+    </div><!-- Footer Bottom Section Start -->
+   
+    <!-- Footer Bottom Section Start -->
+    <div class="footer-bottom-section section">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Footer Copyright -->
+                <div class="col-lg-12 col-12" style="justify-content: center; text-align: center;">
+                    <div class="footer-copyright" style="justify-content: center; text-align: center;"><p>&copy; Copyright, 2023 All Rights Reserved by <a href="https://freethemescloud.com/">Bundelkhand Kosh | &copy; Powered by &nbsp;<a href="https://acttconnect.com/"> Act T Connect  </a></a></p></div>
+                </div>
+                
+                <!-- Footer Payment Support -->
+                <!--<div class="col-lg-3 col-12">-->
+                <!--<div class="footer-copyright"><p>&copy; Powered by <a href="https://acttconnect.com/"> Act T Connect  </a></p></div>-->
+                <!--</div>-->
+                
+                <!--<div class="col-lg-3 col-12">-->
+                <!--<div class="footer-icons icon_section">-->
+                <!--    <i class="fa fa-facebook-official footer_icon" aria-hidden="true"></i>-->
+                <!--    <i class="fa fa-twitter-square footer_icon" aria-hidden="true"></i>-->
+                <!--    <i class="fa fa-instagram footer_icon" aria-hidden="true"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+                
+            </div>
+        </div>
+    </div><!-- Footer Bottom Section Start -->
+    
+</div><!-- Footer Section End -->
+
+
+    
+
+<!-- JS
+============================================ -->
+
+<!-- jQuery JS -->
+<script src="https://bundelkhand-kosh.stilld.in/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<!--<script-->
+<!--  src="https://code.jquery.com/jquery-3.6.4.js"></script>-->
+<!--<script>-->
+
+<!-- Popper JS -->
+<script src="https://bundelkhand-kosh.stilld.in/assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://bundelkhand-kosh.stilld.in/assets/js/bootstrap.min.js"></script>
+<!-- Plugins JS -->
+<script src="https://bundelkhand-kosh.stilld.in/assets/js/plugins.js"></script>
+
+<!-- Main JS -->
+<script src="https://bundelkhand-kosh.stilld.in/assets/js/main.js"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        //  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        
+          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages : 'en,hi,en'}, 'google_translate_element');
+       
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+    $(document).ready(function() {
+
+      $('.counter').each(function () {
+      $(this).prop('Counter',0).animate({
+      Counter: $(this).text()
+      }, {
+      duration: 4000,
+      easing: 'swing',
+      step: function (now) {
+      $(this).text(Math.ceil(now));
+      }
+      });
+      });
+
+    });
+    
+   </script>
+   <script>
+        $(document).ready(function () {    
+          $("#submit").click(function (e) {
+                var validate = Validate();
+                $("#message").html(validate);
+                if (validate.length == 0) {
+                    $.ajax({
+                        type: "POST",
+                        url: "https://bundelkhand-kosh.stilld.in/api/add-subscriber?email="+$("#citySelect").val(),
+                        dataType: "json",
+                        success: function (result, status, xhr) {
+                            $('input[type="email"],textarea').val('');
+                            var data = $("<p>Data is added successfully</p>");
+                            alert("thank you for subscribe" )
+                            $("#message").html(data);
+                            
+                        },
+                        error: function (xhr, status, error) {
+                            alert("Result: Data is not added" )
+                        }
+                    });
+                }
+            });
+
+
+            function Validate() {
+                var errorMessage = "";
+                if ($("#citySelect").val() == "Select") {
+                    errorMessage += "► Select City";
+                }
+                return errorMessage;
+            }
+        });
+    </script> 
+<script>
+  document.querySelector('.mini-photo-wrapper').addEventListener('click', function() {
+  document.querySelector('.menu-container').classList.toggle('active');
+});
+</script>
+
+</body>
+
+</html>
+
+
